@@ -14,7 +14,7 @@ public class Main {
         double num3;
         num1 = ale.nextInt(20);
         num2 = ale.nextInt(20);
-        num3 = ale.nextDouble(100.0);
+        num3 = ale.nextDouble(10.0);
 
         oper.setNumero1(num1);
         oper.setNumero2(num2);
@@ -22,7 +22,7 @@ public class Main {
 
         System.out.println("Número 1: "+oper.getNumero1()+"\nNúmero 2: "+oper.getNumero2()+"\nPotencia: "+oper.calcularPotencia(oper.getNumero1(), oper.getNumero2()));
         System.out.println("\nCalcular Raiz");
-        System.out.println("- Raiz de número mayor entre n´mero menor\n");
+        System.out.println("- Raiz cuadrada de un número aleatorio\n");
         System.out.println("La raiz cuadrada de: "+oper.getNumraiz()+" es: "+oper.calcularRaiz(oper.getNumraiz()));
     }
 }

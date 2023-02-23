@@ -5,16 +5,14 @@ import static java.lang.Math.pow;
 public class Operacion {
     private int numero1;
     private int numero2;
-    private double numraiz;
 
     public Operacion() {
 
     }
 
-    public Operacion(int numero1, int numero2, double numraiz) {
+    public Operacion(int numero1, int numero2) {
         this.numero1 = numero1;
         this.numero2 = numero2;
-        this.numraiz = numraiz;
     }
 
     public int getNumero1() {
@@ -33,20 +31,11 @@ public class Operacion {
         this.numero2 = numero2;
     }
 
-    public double getNumraiz() {
-        return numraiz;
-    }
-
-    public void setNumraiz(double numraiz) {
-        this.numraiz = numraiz;
-    }
-
     @Override
     public String toString() {
         return "Operacion{" +
                 "numero1=" + numero1 +
                 ", numero2=" + numero2 +
-                ", numraiz=" + numraiz +
                 '}';
     }
 
@@ -58,7 +47,11 @@ public class Operacion {
         }
     }
 
-    public double calcularRaiz(double num3){
-        return (double) Math.sqrt(num3);
+    public double calcularRaiz(double num1, double num2){
+        if (num1>num2){
+            return (double) Math.pow(num1, 1/num2);
+        } else {
+            return (double) Math.pow(num2, 1/num1);
+        }
     }
 }
